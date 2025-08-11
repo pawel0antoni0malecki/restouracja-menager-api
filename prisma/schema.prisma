@@ -8,8 +8,9 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  email     String?  @unique
-  password  String?
-  createdAt DateTime @updatedAt
+  id         String   @id @default(uuid())
+  email      String?  @unique
+  password   String?
+  modifiedAt DateTime @updatedAt
+  createdAt  DateTime @default(now())
 }
